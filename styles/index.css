@@ -1,0 +1,171 @@
+.header
+{
+	width: 100%;
+	height: 400px;
+	background-image: url(https://sun9-69.userapi.com/impg/liJi84XPmi6ZmwVik_onmKv3iVzrGxQcT096SA/--znouQGEJ8.jpg?size=1280x421&quality=96&sign=3af3e921a82dbee5ca35c110a02ca07c&type=album);
+	background-size: contain;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+body
+{
+	background-image: url(https://linkin-park.biz/css/bg.jpg);
+	background-size: contain;
+}
+
+.g_image
+{
+	margin-left: 10px;
+	margin-top: 10px;
+	height: 15%;
+	float:left;
+}
+
+
+.names
+{
+	color: white;
+	float: right;
+	font-size: 25px;
+	border: 1px solid white;
+	border-radius: 5px;
+	text-align: center;
+	margin-right: 10px;
+	margin-top: 10px;
+	width: 20%;
+	font-family: Pribambas;
+}
+
+.names ul
+{
+	text-align: left;
+}
+
+
+.citata
+{
+	color: white;
+	position: absolute;
+	font-size: 25px;
+	font-family: Pribambas;
+	border: 1px solid white;
+	border-radius: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	width: 23%;
+	padding: 8px;
+	bottom:0;
+} 
+
+.info
+{
+	color: white;
+	top: 300;
+	text-indent: 40px;
+	font-family: Pribambas;
+	font-size: 22px;
+}
+
+.groupph
+{
+	width: 80%;
+}
+
+.hgalery
+{
+	color: white;
+	font-family: Pribambas;
+	font-size: 30px;
+	float: left;
+	
+	border: 1px solid white;
+	border-radius: 7px;
+	width: 7%;
+	padding: 3px;
+}
+
+.hmembers
+{
+	color: white;
+	font-family: Pribambas;
+	font-size: 30px;
+	float: left;
+	margin-left: 5px;
+	border: 1px solid white;
+	border-radius: 7px;
+	width: 9%;
+	padding: 3px;
+}
+
+.allign
+{
+	text-align: center;
+	width: 100%;
+}
+
+@font-face {
+    font-family: "Pribambas"; 
+    src: url("../fonts/Pribambas.ttf") format("truetype");
+	font-style: normal; 
+	font-weight: normal; 
+   }
+   
+
+ul {
+    list-style: none;
+    display: block;
+    margin:0px;
+    padding:0px;
+}
+
+ul:after {
+    display: block;
+    float: none;
+    content: ' ';
+    clear: both;
+}
+ul.mmenuu > li {
+    float: left;
+    position: relative;
+}
+ul.mmenuu > li > a {
+    display: block;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    background-color: #8b00ff;
+	font-family: Pribambas;
+	font-size: 25px;
+}
+ul.mmenuu > li > a:hover {
+    background-color: #800080;
+}
+ul.ssubmenuu {
+    position: absolute;
+    width: 240px;
+    top: 37px;
+    left:0px;
+    display: none;
+    background-color: white;
+}
+ul.ssubmenuu > li {
+    display: block;
+}
+ul.ssubmenuu > li > a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #8b00ff;
+	font-family: Pribambas;
+	font-size: 25px;
+}
+ul.ssubmenuu > li > a:hover {
+    background-color: #800080;
+    text-decoration: underline;
+}
+ul.mmenuu > li:hover > ul.ssubmenuu {
+    display: block;
+}

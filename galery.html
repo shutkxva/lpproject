@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang = "ru">
+<head>
+	<title>ФОТОГАЛЕРЕЯ</title>
+	<meta charset = "utf-8"/>
+	<link type = "text/css" rel="stylesheet" href ="styles/galery.css"/>
+</head>
+<body>
+	<div class = "zagolovok">
+	ФОТОГАЛЕРЕЯ
+	</div>
+	<div class="container">
+
+  <!-- Полноразмерные изображения с числовым текстом -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+      <img src="img/lp2.jpg" style="width:80%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+      <img src="img/lp5.jpg" style="width:80%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+      <img src="img/lp6.jpg" style="width:80%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+      <img src="img/lp7.jpg" style="width:80%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+      <img src="img/lp8.jpg" style="width:80%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+      <img src="img/lp9.jpg" style="width:80%">
+  </div>
+
+  <!-- Вперед и назад кнопки -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Текст изображения -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Миниатюры -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="img/lp2.jpg" style="width:100%" onclick="currentSlide(1)" alt="Исполнение песни 'One more light'">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/lp5.jpg" style="width:100%" onclick="currentSlide(2)" alt="Фото времен Hybrid theory">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/lp6.jpg" style="width:100%" onclick="currentSlide(3)" alt="Фото с промо-фотосессии в поддержку альбома MTM">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/lp7.jpg" style="width:100%" onclick="currentSlide(4)" alt="Фото времен Meteora">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/lp8.jpg" style="width:100%" onclick="currentSlide(5)" alt="Стоп-кадр с клипа'Numb'">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/lp9.jpg" style="width:100%" onclick="currentSlide(6)" alt="Логотип группы">
+    </div>
+  </div>
+</div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Вперед/назад элементы управления
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Элементы управления миниатюрами изображений
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+</script>
+</body>
+</html>
